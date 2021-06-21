@@ -11,24 +11,29 @@ import MapKit
 
 struct ContentView: View {
     
-    let game: Game
+    @State var game: Game
     @ObservedObject var locationViewModel: LocationViewModel
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    private let objects: [SoundObject] = [
+        SoundObject(lat: 48.78177957443577, long: 9.12039682240935, name: "thunder", soundExtension: "mp3", radius: 6.0),
+        SoundObject(lat: 48.7813037988527, long: 9.117755210187507, name: "door", soundExtension: "mp3", radius: 7.0),
+        SoundObject(lat: 48.781392765368196, long: 9.11853595342797, name: "water", soundExtension: "mp3", radius: 5.0),
+        ]
+    
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     
     init() {
-        game = Game(long: 0, lat: 0)
+        game = Game(self.objects)
         locationViewModel = LocationViewModel()
         locationViewModel.setGame(game: game)
     }
     
     var body: some View {
-//        VStack {
-//
-//            Text("Latitude: \(locationViewModel.userLatitude)")
-//            Text("Longitude: \(locationViewModel.userLongitude)")
-//        }
-        Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow)).edgesIgnoringSafeArea(.all)
+        Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: objects) { object in
+            MapMarker(coordinate: object.position)
+            
+        }
+            .edgesIgnoringSafeArea(.all)
 
     }
 }

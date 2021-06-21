@@ -35,9 +35,7 @@ extension LocationViewModel: CLLocationManagerDelegate {
     guard let location = locations.last else { return }
     userLatitude = location.coordinate.latitude
     userLongitude = location.coordinate.longitude
-    print("locaitonUpdated")
-    self.game?.updateLocation(lat: userLatitude, long: userLongitude)
-    print(location)
+    self.game?.onLocationChanged(lat: userLatitude, long: userLongitude)
   }
 }
 
