@@ -6,11 +6,37 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ContentView: View {
+    
+    let game: Game
+    @ObservedObject var locationViewModel: LocationViewModel
+    
+    init() {
+        game = Game(long: 0, lat: 0)
+        locationViewModel = LocationViewModel()
+        locationViewModel.setGame(game: game)
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+//            Button("Up") {
+//                game.moveUp()
+//            }
+//            Button("Down") {
+//                game.moveDown()
+//            }
+//            Button("Left") {
+//                game.moveLeft()
+//            }
+//            Button("Right") {
+//                game.moveRight()
+//            }
+            
+            Text("Latitude: \(locationViewModel.userLatitude)")
+            Text("Longitude: \(locationViewModel.userLongitude)")
+        }
     }
 }
 

@@ -11,6 +11,10 @@
 		320EB669267E5418007C8872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EB668267E5418007C8872 /* ContentView.swift */; };
 		320EB66B267E541A007C8872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320EB66A267E541A007C8872 /* Assets.xcassets */; };
 		320EB66E267E541A007C8872 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320EB66D267E541A007C8872 /* Preview Assets.xcassets */; };
+		320EB676267E544F007C8872 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EB675267E544F007C8872 /* game.swift */; };
+		32827F7F267FB4AA0036CB62 /* soundobject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32827F7E267FB4AA0036CB62 /* soundobject.swift */; };
+		32827F81267FB9A90036CB62 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 32827F80267FB9A90036CB62 /* sounds */; };
+		32ECB0122680E80100EA779E /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECB0112680E80100EA779E /* location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		320EB66A267E541A007C8872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		320EB66D267E541A007C8872 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		320EB66F267E541A007C8872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		320EB675267E544F007C8872 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
+		32827F7E267FB4AA0036CB62 /* soundobject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soundobject.swift; sourceTree = "<group>"; };
+		32827F80267FB9A90036CB62 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
+		32ECB0112680E80100EA779E /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +60,15 @@
 		320EB665267E5418007C8872 /* audiogame */ = {
 			isa = PBXGroup;
 			children = (
+				32827F80267FB9A90036CB62 /* sounds */,
 				320EB666267E5418007C8872 /* audiogameApp.swift */,
 				320EB668267E5418007C8872 /* ContentView.swift */,
 				320EB66A267E541A007C8872 /* Assets.xcassets */,
 				320EB66F267E541A007C8872 /* Info.plist */,
 				320EB66C267E541A007C8872 /* Preview Content */,
+				320EB675267E544F007C8872 /* game.swift */,
+				32827F7E267FB4AA0036CB62 /* soundobject.swift */,
+				32ECB0112680E80100EA779E /* location.swift */,
 			);
 			path = audiogame;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			files = (
 				320EB66E267E541A007C8872 /* Preview Assets.xcassets in Resources */,
 				320EB66B267E541A007C8872 /* Assets.xcassets in Resources */,
+				32827F81267FB9A90036CB62 /* sounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32827F7F267FB4AA0036CB62 /* soundobject.swift in Sources */,
+				320EB676267E544F007C8872 /* game.swift in Sources */,
+				32ECB0122680E80100EA779E /* location.swift in Sources */,
 				320EB669267E5418007C8872 /* ContentView.swift in Sources */,
 				320EB667267E5418007C8872 /* audiogameApp.swift in Sources */,
 			);
