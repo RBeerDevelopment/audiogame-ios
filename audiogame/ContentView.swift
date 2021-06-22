@@ -15,7 +15,7 @@ struct ContentView: View {
     @ObservedObject var locationViewModel: LocationViewModel
     
     private let objects: [SoundObject] = [
-        SoundObject(lat: 48.78177957443577, long: 9.12039682240935, name: "thunder", soundExtension: "mp3", radius: 6.0),
+        SoundObject(lat: 48.208148, long: 16.382691, name: "thunder", soundExtension: "mp3", radius: 6.0),
         SoundObject(lat: 48.7813037988527, long: 9.117755210187507, name: "door", soundExtension: "mp3", radius: 7.0),
         SoundObject(lat: 48.781392765368196, long: 9.11853595342797, name: "water", soundExtension: "mp3", radius: 5.0),
         ]
